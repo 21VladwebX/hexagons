@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import InitGame  from '../InitGame'
 import { getURLParams } from './app.utils'
+import  ParamsForm  from '../ParamsForm'
 
 export const App = () => {
-	const a = getURLParams()
+	const [ params, setParams ] = useState({})
 
+	const urlParams = getURLParams()
 
-	return <div>your game should be here</div>
+	const hasParams = !!urlParams.radius
+
+	return (
+		<div className='container'>
+			{hasParams 
+				? (<InitGame params={params} />) 
+				: (<ParamsForm setParams={setParams}/>)
+			}
+		</div>			
+	)
 }
