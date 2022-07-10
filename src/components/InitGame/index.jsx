@@ -6,6 +6,5 @@ const InitGame = () => {
 	return <div> InitGame </div>  
 }
 
-
 export default InitGame
 

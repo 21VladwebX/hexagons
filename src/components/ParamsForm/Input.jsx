@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 
-const Input = ({ label, inputProps, id, examples }) => {
-	const [ inputValue, setInputValue ] = useState(inputProps?.value || undefined)
+const Input = ({label, inputProps, id, examples}) => {
+	const [inputValue, setInputValue] = useState(inputProps?.value || undefined)
 
 	const onHintClick = (value) => () => {
 		setInputValue(value)
 	}
 
-	const onInputChange = ({ target }) => {
+	const onInputChange = ({target}) => {
 		setInputValue(target.value)
 	}
 
@@ -23,7 +23,7 @@ const Input = ({ label, inputProps, id, examples }) => {
 			{!!examples?.length && (
 				<i className='input-wrapper__hint'>
         Example:
-					{examples.map((item, index)=>(
+					{examples.map((item, index) => (
 						<p key={item} onClick={onHintClick(item)}> {item}{index !== (examples?.length -1) && ','}</p>
 					))}
 				</i>
@@ -35,7 +35,7 @@ const Input = ({ label, inputProps, id, examples }) => {
 Input.propTypes = {
 	label: PropTypes.string,
 	inputProps: PropTypes.shape({
-		value: PropTypes.oneOf([ PropTypes.string, PropTypes.number ]),
+		value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 		type: PropTypes.string
 	}),
 	id: PropTypes.string.isRequired,

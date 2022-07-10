@@ -37,6 +37,7 @@
 }
 
 .input-wrapper input {
+  width: 100%;
   background: transparent;
   border: none;
   border-bottom: 1px solid #464545;

@@ -7,11 +7,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/ramda": "^0.27.45",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "classnames": "^2.3.1",
     "fp-ts": "^2.11.5",
     "jest-puppeteer": "^4.4.0",
@@ -23,8 +18,7 @@
     "react-scripts": "4.0.3",
     "serve": "^12.0.1",
     "stylelint-config-standard": "^26.0.0",
-    "tree-kill": "^1.2.2",
-    "typescript": "^4.1.2"
+    "tree-kill": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "stylelint": "^14.9.1"
+    "stylelint": "^14.9.1",
+    "stylelint-selector-bem-pattern": "^2.1.1"
   }
 }

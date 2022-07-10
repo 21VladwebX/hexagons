@@ -1,7 +1,7 @@
-export default [ {
+export default [{
 	id: 'port',
 	label: 'Port',
-	inputProps:{
+	inputProps: {
 		type: 'text',
 		value: 80
 	},
@@ -12,7 +12,7 @@ export default [ {
 }, {
 	id: 'hostname',
 	label: 'Hostname',
-	inputProps:{
+	inputProps: {
 		type: 'text',
 		value: 'hex-2048.octa.wtf'
 	},
@@ -29,4 +29,4 @@ export default [ {
 		max: 6,
 		value: 2
 	}
-} ]
+}]
