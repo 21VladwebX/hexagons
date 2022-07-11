@@ -1,5 +1,7 @@
-const HOSTNAME = 'hostname'
-const RADIUS = 'radius'
-const PORT = 'port'
+export const HOSTNAME = 'hostname'
+export const RADIUS = 'radius'
+export const PORT = 'port'
 
 export const possibleKeys = [HOSTNAME, RADIUS, PORT]
+
+export const defaultPort = 80

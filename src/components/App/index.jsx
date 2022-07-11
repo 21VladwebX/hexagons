@@ -1,5 +1,5 @@
 import React from 'react'
-import InitGame  from '../InitGame'
+import InitGame  from '../HexPoligon'
 import {getURLParams} from './app.utils'
 import  ParamsForm  from '../ParamsForm'
 

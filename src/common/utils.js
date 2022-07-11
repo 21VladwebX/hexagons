@@ -6,9 +6,8 @@ export const parseFormData = (data = {}) => data?.reduce((acc, item) => {
 	return {...acc, [ item.id ]: item.value}
 }, {})
 
-export const getUrlWithParams = (data = {}) => {
-
-	return possibleKeys.reduce((acc, item, index) => (
+export const getUrlWithParams = (data = {}) => (
+	possibleKeys.reduce((acc, item, index) => (
 		acc += `${index === 0 ? '' : '&'}${item}=${data[ item ]}`
 	), '?')
-}
+)

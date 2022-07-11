@@ -1,9 +1,11 @@
+import {defaultPort} from '../../common/constants'
+
 export default [{
 	id: 'port',
 	label: 'Port',
 	inputProps: {
 		type: 'text',
-		value: 80
+		value: defaultPort
 	},
 	examples: [
 		'80',
