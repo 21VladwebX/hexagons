@@ -2,10 +2,9 @@ import React from 'react'
 import formConfig from './config'
 import Input from './Input'
 import './index.css'
-import {getUrlWithParams, parseFormData} from '../../common/utils'
+import {getUrlWithParams, parseFormData} from './parseParams.utils'
 
 const ParamsForm = () => {
-
 	const onFormSubmit = (event) => {
 		event.preventDefault()
 
@@ -24,7 +23,7 @@ const ParamsForm = () => {
 							<Input { ...item } />
 						</label>
 					</div>	
-				))     }
+				))}
 			
 				<button className='form-wrapper__button'>Start</button>
 			</form>

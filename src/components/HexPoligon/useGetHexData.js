@@ -1,9 +1,8 @@
 import {useEffect, useState} from 'react'
-import {getRequestUrl} from './hexPoligonUtils.js'
 import postHexData from './postHexData.js'
 
-export default  (requestData) => {
-	const [{data, isLoading, error}, setState] = useState({data: {}})
+export default (url) => {
+	const [{data, isLoading, error}, setState] = useState({data: []})
 
 	useEffect(() => {
 		setState({
@@ -11,10 +10,17 @@ export default  (requestData) => {
 			isLoading: true,
 			error: ''
 		})
-
-		postHexData(getRequestUrl(requestData))
-			.then((data) => {
-				console.log(data)
+ 
+		postHexData(url)
+			.then((response) => (
+				response.json()
+			))
+			.then(response => {
+				setState({
+					data: response,
+					isLoading: true,
+					error: ''
+				})
 			})
 			.catch(() => setState({
 				data: {},
@@ -22,7 +28,7 @@ export default  (requestData) => {
 				error: 'network-issues'
 			}))
 
-	}, [requestData])
+	}, [url])
 
 	return {data, isLoading, error}
 }

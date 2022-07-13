@@ -18,7 +18,6 @@ const Input = ({label, inputProps, id, examples}) => {
 		<>
 			<span>{label} {isNotTextType && inputValue}</span>
 			<input {...inputProps} id={id} value={inputValue} onChange={onInputChange} />
-			{/* on hint click set this value as input value */}
 			
 			{!!examples?.length && (
 				<i className='input-wrapper__hint'>

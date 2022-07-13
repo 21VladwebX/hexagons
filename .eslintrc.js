@@ -2,7 +2,8 @@ module.exports = {
 	env: {
 		browser: true,
 		node: true,
-		es2021: true
+		es2021: true,
+		jest: true
 	},
 	extends: ['eslint:recommended', 'plugin:react/jsx-runtime', 'plugin:react/recommended'],
 	parserOptions: {

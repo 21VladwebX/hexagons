@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.3.1",
     "fp-ts": "^2.11.5",
-    "jest-puppeteer": "^4.4.0",
     "prop-types": "^15.8.1",
     "puppeteer": "^7.1.0",
     "ramda": "^0.27.1",
@@ -21,6 +20,8 @@
     "tree-kill": "^1.2.2"
   },
   "scripts": {
+    "testJest": "jest",
+    "testJestWatch": "jest --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "start-server": "node rng-server/index.js",
